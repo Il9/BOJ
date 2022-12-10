@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [number1, number2, number3] = input.map(Number);

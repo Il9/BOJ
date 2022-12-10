@@ -1,10 +1,13 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [, AString, , XString] = input;
 
-const A = AString.split(' ').map(Number).sort((a, b) => a - b);
+const A = AString.split(' ')
+  .map(Number)
+  .sort((a, b) => a - b);
 const X = XString.split(' ');
 
 function search(n) {
@@ -13,7 +16,7 @@ function search(n) {
 
   while (min <= max) {
     const mid = Math.floor((min + max) / 2);
-    const N  = A[mid];
+    const N = A[mid];
 
     if (N === n) {
       return true;

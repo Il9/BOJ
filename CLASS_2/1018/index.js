@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [NMString, ...rows] = input;
@@ -11,7 +12,7 @@ const SIZE = 8;
 let answer = null;
 
 function getPaintCount(board) {
-  const colorMap = { 'B': 'W', 'W': 'B' };
+  const colorMap = { B: 'W', W: 'B' };
 
   return Math.min(
     ...['B', 'W'].map(firstColor => {

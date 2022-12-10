@@ -1,0 +1,7 @@
+{
+  "extends": ["@il9/base"],
+  "ignorePatterns": ["node_modules"],
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off"
+  }
+}

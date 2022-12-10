@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [NKString] = input;
@@ -13,7 +14,7 @@ const answer = [];
 while (numbers.length) {
   i = i + (K - 1);
   while (i >= numbers.length) {
-    i = i  >= numbers.length ? i - numbers.length : i;
+    i = i >= numbers.length ? i - numbers.length : i;
   }
 
   answer.push(...numbers.splice(i, 1));

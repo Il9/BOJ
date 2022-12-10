@@ -1,9 +1,15 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [NString, NNumbersString, MString, MNumbersString] = input;
-const [N, NNumbers, M, MNumbers] = [Number(NString), NNumbersString.split(' ').map(Number), Number(MString), MNumbersString.split(' ').map(Number)];
+const [N, NNumbers, M, MNumbers] = [
+  Number(NString),
+  NNumbersString.split(' ').map(Number),
+  Number(MString),
+  MNumbersString.split(' ').map(Number),
+];
 
 const NMap = new Map();
 

@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [NMString, numbersString] = input;
@@ -17,7 +18,7 @@ while (min <= max) {
   m = 0;
 
   for (let i = 0; i < N; i++) {
-    m += numbers[i] < H ? 0 : (numbers[i] - H);
+    m += numbers[i] < H ? 0 : numbers[i] - H;
   }
 
   if (M === m) {

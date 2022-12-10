@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [lengthString, numbersString] = input;
@@ -15,7 +16,7 @@ let i = 0;
 while (primeNumbers.length > i + 1) {
   const current = primeNumbers[i++];
 
-  primeNumbers = primeNumbers.filter(n => (n % current) || n === current);
+  primeNumbers = primeNumbers.filter(n => n % current || n === current);
 }
 
 console.log(numbers.filter(n => primeNumbers.includes(n)).length);

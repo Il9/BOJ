@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [NKString, ...lansString] = input;
@@ -12,9 +13,9 @@ let left = 1;
 let right = maxLength;
 let answer;
 
-while(left <= right) {
+while (left <= right) {
   let center = Math.floor((left + right) / 2);
-  
+
   const count = lans.reduce((count, lan) => count + Math.floor(lan / center), 0);
 
   if (count < K) {

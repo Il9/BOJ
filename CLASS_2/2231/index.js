@@ -1,12 +1,13 @@
 const fs = require('fs');
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [numberString] = input;
 const number = Number(numberString);
 const length = numberString.length;
 
-const start = number - Number(numberString.charAt(0)) - ((length - 1) * 9);
+const start = number - Number(numberString.charAt(0)) - (length - 1) * 9;
 
 let answer = 0;
 

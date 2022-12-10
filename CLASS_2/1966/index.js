@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [countString, ...cases] = input;
@@ -19,9 +20,9 @@ class Queue {
   shift() {
     const document = this.queue.shift();
 
-    this.highestPriority = Math.max(...this.queue.map(({priority}) => priority));
+    this.highestPriority = Math.max(...this.queue.map(({ priority }) => priority));
 
-    return document; 
+    return document;
   }
 
   push(document) {
@@ -41,7 +42,7 @@ for (let i = 0; i < count; i++) {
   const queue = new Queue(priorities);
   let order = 1;
 
-  while(true) {
+  while (true) {
     const document = queue.shift();
 
     if (queue.hasHigherPriority(document.priority)) {

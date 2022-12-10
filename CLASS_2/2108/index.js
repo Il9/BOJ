@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const [NString, ...numbersString] = inputString.split('\n');
 
 const numbers = numbersString.map(Number).sort((a, b) => a - b);

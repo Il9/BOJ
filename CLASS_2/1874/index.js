@@ -1,5 +1,6 @@
-const fs = require("fs");
-const inputString = fs.readFileSync("/dev/stdin").toString().trim();
+const fs = require('fs');
+
+const inputString = fs.readFileSync('/dev/stdin').toString().trim();
 const input = inputString.split('\n');
 
 const [NString, ...numbersString] = input;
@@ -26,7 +27,7 @@ for (let i = 0; i < N; i++) {
     }
 
     stack.pop();
-    answer.push('-')
+    answer.push('-');
   } else {
     answer = ['NO'];
     break;
